@@ -10,8 +10,8 @@ const router =Router()
 
 //Routes for Product 
 router.get("/product",getProducts);
-router.get('/product/:id',getOneproduct,updateProduct)
-router.put('/product/:id',body('name').isString(), handleInputError )
+router.get('/product/:id',getOneproduct)
+router.put('/product/:id',body('name').isString(), handleInputError,updateProduct )
 router.post('/product/',body('name').isString(), handleInputError ,createProduct)
 router.delete('/product/:id',deleteProduct)
 
